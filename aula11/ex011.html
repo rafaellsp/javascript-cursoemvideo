@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sistema de identificação</title>
+</head>
+<body>
+	<h1>Sistema de identificação</h1>
+	Seu pais é: <input type="text" name="pais" id="pais">
+	<input type="button" value="Verificar" onclick="clicar()">
+	<div id="res">
+
+	</div>
+	<script>
+		function clicar() {
+		var pais = window.document.querySelector('input#pais')
+		var res = window.document.querySelector('div#res')
+		var p = String(pais.value)
+		res.innerHTML = `<p>Seu pais é <strong>${p}</strong></p>`
+		if (p == 'Brasil') {
+			res.innerHTML = `<p>Você é Brasileiro</p>`
+		} else{
+			res.innerHTML = `<p>Você é estrangeiro</p>`
+		}
+	
+		}
+	</script>
+</body>
+</html>
